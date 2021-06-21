@@ -56,11 +56,15 @@ MIDDLEWARE = [
 ]
 
 
-CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000",
-#     "http://127.0.0.1:3000"
-# ]
+# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+    "http://todo.tusharbohara.com.np",
+    "https://todo.tusharbohara.com.np",
+    "https://www.todo.tusharbohara.com.np",
+    "http://todo.tusharbohara.com.np",
+]
 
 
 ROOT_URLCONF = 'todo.urls'
@@ -132,7 +136,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home6/tusharbo/todo-api.tusharbohara.com.np/static'
+STATIC_ROOT = '/home6/tusharbo/todo.tusharbohara.com.np/static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
