@@ -6,6 +6,10 @@ from django.db import models
 
 class Todo(models.Model):
     text = models.CharField(max_length=255)
-    date = models.DateField(default=timezone.now)
-    time = models.TimeField(default=timezone.now)
+    date = models.DateField(blank=True, default=timezone.localdate)
+    time = models.TimeField(blank=True, default=timezone.localtime)
     reminder = models.BooleanField(default=False)
+    owner = models.ForeignKey('auth.User', related_name='tasks', on_delete=models.CASCADE)
+
+    class Meta:
+        ordering = ['date']
